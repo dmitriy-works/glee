@@ -1,13 +1,26 @@
-
+html,
+body {
+  height: 100%;
+}
 body {
   color: #191919;
   @extend %raleway-400;
   font-size: 16px;
   line-height: 24px;
+  display: flex;
+  flex-direction: column;
 }
+ .main {
+   flex-grow: 1;
+ }
 .container {
   max-width: 1800px;
   padding: 0 15px;
+  margin: 0 auto;
+}
+.container-small {
+  max-width: 1200px; 
+  padding: 0 15px; 
   margin: 0 auto;
 }
 
