@@ -78,6 +78,84 @@
     background-color: $accent;
   }  
 }
+.smart-slider {
+  padding-bottom: 75px;
+  &__content {
+    max-width: 440px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);    
+  }
+  &__title {
+    @extend %mulish-700;
+    font-size: 72px;
+    line-height: 85px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    @extend %mulish-400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  &__link {
+    width: 200px;
+    display: inline-block;
+    @extend %mulish-500;
+    font-size: 15px;
+    padding: 20px;
+    background-color: $light-color;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 29px;
+      right: 20px;
+      width: 22px;
+      height: 9px;
+      background-image: url('../images/arrow-slider.png');
+      background-repeat: no-repeat;
+    }
+  }
+}
+.slick-dots {  
+  position: absolute;
+  bottom: 50px;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+.slick-dots li {
+ display: inline-block;
+ padding: 0 5px;
+}
+.slick-dots button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 10px;
+  color: #243f4d;
+  background-color: rgba(255, 255, 255, .3);
+}
+.slick-active button {
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,7 +259,7 @@
     outline: none;
     cursor: pointer;
     padding: 12px;
-    background-color: #a3bbc8;
+    background-color: $light-color;
     position: absolute;
     top: 0;
     right: 0;
