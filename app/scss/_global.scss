@@ -24,4 +24,28 @@ body {
   padding: 0 15px; 
   margin: 0 auto;
 }
-
+.products__title-box {
+  margin-bottom: 75px;
+}
+.title {
+  color: $title;
+  @extend %raleway-700;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.title__list {
+  color: $default;
+  @extend %raleway-700;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 16px;
+  line-height: 24px;  
+  &-item {
+    &--active {
+    color: $title;
+    }
+  }
+  
+}

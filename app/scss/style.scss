@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 @import 'media';
 
 .header {
@@ -148,7 +149,7 @@
     display: flex;
     justify-content: space-around;
     padding: 45px 0;
-    background-color: $light-color;
+    background-color: #E7DECC;
   }
   &__item {
     max-width: 300px;
@@ -180,12 +181,117 @@
     font-size: 18px;
     line-height: 32px;    
     margin-bottom: 15px;
-  }
-  
+  }  
 }
-
-
-
+.products {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+  }
+  &__title {
+    color: $title;
+    @extend %raleway-700;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+  &__price {
+    color: $light-color;
+    @extend %raleway-500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__btn {
+    text-align: center;
+    margin-top: 75px;
+  }
+  &__link {
+    display: inline-block;    
+    color: $accent;
+    @extend %raleway-500;
+    padding: 14px 27px;
+    text-transform: uppercase;
+    border: 1px solid $accent;
+    transition: all .3s;
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+    }    
+  }
+}
+.products-item {
+  display: block;
+  text-align: center;
+  width: 270px;
+  border-radius: 10px;
+  padding: 25px 40px;
+  background-color: #fff;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  transition: all .3s;
+  position: relative;
+  &:hover {
+    .products-item__link-box {
+      opacity: 1;
+    }
+  }
+  &__img-box {      
+    display: block;  
+    height: 200px;  
+    margin-bottom: 55px;
+  }
+  &__link-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;  
+    transform: translateY(-50%); 
+    width: 200px;
+    height: 15px;   
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    gap: 25px; 
+    opacity: 0;    
+    transition: all .3s;
+  }  
+  &__link {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid $accent;
+    
+    position: relative;
+    transition: all .3s;    
+    &:hover {
+      path {
+        fill: #fff;
+      }
+      border: none;
+      background-color: $sale;
+    }
+  }  
+  &--sale::before {
+    content: 'SALE';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    @extend %raleway-700;
+    font-size: 14px;
+    padding: 3px 7px;
+    background-color: $sale;
+  }
+}
+.star {
+  margin: 0 auto 10px;
+}
 
 
 
