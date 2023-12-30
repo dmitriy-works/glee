@@ -78,8 +78,7 @@
     background-color: $accent;
   }  
 }
-.smart-slider {
-  padding-bottom: 75px;
+.smart-slider {  
   &__content {
     max-width: 440px;
     color: #fff;
@@ -142,6 +141,47 @@
 }
 .slick-active button {
   background-color: #fff;
+}
+.support {
+  margin-bottom: 75px;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 45px 0;
+    background-color: $light-color;
+  }
+  &__item {
+    max-width: 300px;
+    padding-left: 80px;
+    position: relative;    
+  }
+  .support__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 52px;
+    height: 54px;      
+  }
+  .support__item--support::before {
+    background-image: url('../images/icons/support-1.svg');
+    background-repeat: no-repeat;
+  }
+  .support__item--delivery::before {
+    background-image: url('../images/icons/delivery.svg');
+    background-repeat: no-repeat;
+  }
+  .support__item--payment::before {
+    background-image: url('../images/icons/payment.svg');
+    background-repeat: no-repeat;
+  }
+  &__title {
+    color: $title;
+    font-size: 18px;
+    line-height: 32px;    
+    margin-bottom: 15px;
+  }
+  
 }
 
 
