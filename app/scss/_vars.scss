@@ -30,5 +30,39 @@ $sale: #E74C3C;
   font-weight: 700;
 }
 
+%btn__link {
+  width: 200px;
+  display: inline-block;
+  @extend %mulish-700;
+  font-size: 15px;
+  padding: 20px;
+  background-color: $light-color;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 52px;
+    height: 29px;
+    background-image: url('../images/arrow-btn-white.svg');
+    background-repeat: no-repeat;
+    }
+}
 
-
+%btn__link-border {
+  color: $accent;
+  width: 200px;
+  display: inline-block;
+  @extend %mulish-700;
+  font-size: 15px;
+  padding: 20px;
+  border: 1px solid $accent;
+  background-color: transparent;
+  transition: all .3s;  
+    &:hover {
+      color: #fff;
+      border: none;
+      background-color: $accent;
+    }
+}
