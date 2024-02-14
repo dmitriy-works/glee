@@ -14,8 +14,9 @@ function browsersync() {
             baseDir: "app/"
         },
         notify:false
-    })
+    });
 }
+
 
 
 function styles() {

@@ -17,7 +17,7 @@ body {
 .container {
   max-width: 1800px;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 0 auto;  
 }
 .container-small {
   max-width: 1200px; 
@@ -46,6 +46,14 @@ body {
     &--active {
     color: $title;
     }
-  }
-  
+  }  
+}
+
+.title-top {
+  color: #222933;
+  @extend %mulish-400;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 10px;
 }
