@@ -69,3 +69,26 @@ $dark-green: #243f4d;
       background-color: $accent;
     }
 }
+
+%btn__link-team {
+  color: #fff;
+  @extend %raleway-700;
+  font-size: 15px;
+  padding: 15px;
+  display: inline-block;
+  width: 170px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: $light-color;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 27px;
+    width: 15px;
+    height: 11px;
+    background-image: url('../images/icons/arrow-right-btn.svg');
+  }
+}
