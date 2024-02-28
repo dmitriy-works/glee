@@ -33,6 +33,16 @@ $dark-green: #243f4d;
   font-weight: 700;
 }
 
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+
 %btn__link {
   width: 200px;
   display: inline-block;
