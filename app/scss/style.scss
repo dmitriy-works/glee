@@ -205,10 +205,111 @@
     }    
   }
 }
+
 .products-item {
+  width: 270px;
+  &.products-item--list {    
+    width: 100%;
+    max-height: 500px; 
+    padding: 20px;
+    .products-item__inner {
+      display: flex;   
+      align-items: center;   
+    }
+    .products-item__box {
+      padding: 40px 30px;
+      border: 3px solid $bg;
+      transition: all .3s;            
+    }  
+        
+    .products-item__img-box {  
+      height: 100%;       
+      margin-bottom: -20px;       
+    }
+    .products-item__images {
+      height: 335px;
+    }
+    .products-item__content {
+      text-align: left;
+      margin-left: 100px;
+    }
+    .products__title {
+      color: $dark-green;
+      @extend %raleway-400;
+      font-size: 40px;
+      line-height: 52px;      
+    }
+    .star {
+      margin: 0 0 40px 0;
+    }
+    .jq-ry-container {
+      padding: 0;
+    }
+    
+    .products__price {
+      color: $light-color;
+      font-size: 30px;
+      margin: 30px 0 40px;
+    }
+    .products__description {
+      display: block;
+      font-size: 16px;
+    }
+    .products__description-title {
+      color: $dark-green;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .description-list {
+      list-style: inside;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .description-item {
+      font-size: 14px;      
+    }
+    .products-item__content-box {
+      display: none;
+    }
+    .products-item__content-boxlist {
+      display: block;
+    }
+    .star {
+      display: none;
+    }
+    .star-list {
+      display: block;
+    }
+    .products-item__btn {
+      display: block;
+      color: #fff;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 15px 50px;
+      margin-top: 35px;
+      background-color: $light-color;
+      text-transform: uppercase;
+    }
+    .products-item__link-box {
+      display: none;
+    }
+    .products-item__link-favorite {      
+      width: 110px;      
+      display: flex;  
+      align-items: center;   
+      gap: 20px;
+      opacity: 1;
+      margin: 0 auto;
+      transition: all .3s;      
+    }
+   .products-item__box:hover .products-item__link-favorite {
+        opacity: 1;
+    } 
+  }
   display: block;
   text-align: center;
-  width: 270px;
   border-radius: 10px;
   padding: 25px 40px;
   background-color: #fff;
@@ -219,6 +320,9 @@
     .products-item__link-box {
       opacity: 1;
     }
+  }
+  .products__description {
+    display: none;
   }
   &__img-box {      
     display: block;  
@@ -276,6 +380,21 @@
 }
 .star {
   margin: 0 auto 10px;
+}
+.star-list {
+  display: none;
+}
+.products-item__btn {
+  display: none;
+}
+.products-item__link-favorite {
+  display: none;
+}
+.products-item__content-box {
+  display: block;
+}
+.products-item__content-boxlist {
+  display: none;
 }
 .categories {
   padding: 100px 0;
@@ -959,7 +1078,7 @@
   padding: 120px 0;
   &__inner {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
   }
   &__filters {
     width: 300px;
@@ -1255,16 +1374,89 @@
 }
 
 
+.shop-content {
+  width: 100%; 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .products-item {
+      margin-bottom: 40px;
+    }
+  } 
 
 
+  &__filter {    
+    padding: 20px 30px;
+    border: 2px solid #f6f6f6;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__buttons {
+    color: $default;
+    @extend %raleway-500;
+    display: flex;
+    align-items: center;
+  }
+  &__filter-btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 15px;
+    line-height: 0;
+    background-color: transparent;
+    &--active {
+      path {
+        fill: #243f4d;
+      }
+    }
+  }
+}
 
+.jq-selectbox__select {  
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;  
+  padding: 0 30px 0 0;
+  margin-left: 30px;
+  background: transparent;
+}
 
+.jq-selectbox__select-text {
+  color: $default;
+  @extend %raleway-500;
+}
 
+.jq-selectbox__trigger {
+  border-left: none;
+}
 
+.jq-selectbox__select:hover {
+  outline: none;
+  background: transparent;
+}
 
+.jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 10px;
+    height: 5px;
+    border: none;    
+    background-image: url('../images/icons/angle-down.svg');
+}
 
+.jq-selectbox li {
+  display: none;
+}
 
-
+.jq-selectbox__dropdown {
+  display: none !important;
+}
 
 
 
