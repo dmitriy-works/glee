@@ -7,10 +7,12 @@ $(function () {
 
   $('.button-list').on('click', function () {
     $('.products-item').addClass('products-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid')
   })
 
   $('.button-grid').on('click', function () {
     $('.products-item').removeClass('products-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid')
   })
 
 
