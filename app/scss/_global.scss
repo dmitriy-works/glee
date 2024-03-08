@@ -101,7 +101,6 @@ body {
     }
   }
 
-
   &__arrows {
     text-transform: uppercase;
     position: relative;
@@ -131,3 +130,13 @@ body {
   }
 }
 
+svg {
+  width: 30px;
+  height: 20px;
+}
+.product-info__link {
+  color: $default;
+  &:hover {
+    color: $accent;
+  }
+}
