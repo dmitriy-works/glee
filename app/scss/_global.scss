@@ -130,13 +130,65 @@ body {
   }
 }
 
-svg {
+.product-info__icon {
   width: 30px;
-  height: 20px;
+  height: 20px;  
 }
 .product-info__link {
   color: $default;
   &:hover {
     color: $accent;
   }
+}
+
+.product-about__seller-star {  
+  width: 14px;
+  height: 14px;
+}
+.product-about__seller-btn {
+  color: #7b7b7b;
+  width: 24px;
+  height: 24px;
+}
+.product-about__preorder-danger {
+  width: 30px;
+  height: 24px;
+}
+.product-about__price-icon {
+  color: #7b7b7b;
+  width: 24px;
+  height: 24px;
+  &--active {
+    color: #ffc35b;
+  }
+}
+
+
+
+.product-about__buy-basket {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+.product-about__delivery-map {
+  color: #7b7b7b;
+  width: 24px;
+  height: 24px;
+}
+.product-about__delivery-chevron {
+  color: #7b7b7b;
+  width: 30px;
+  height: 30px;  
+  margin-top: 10px;
+}
+.delivery-services__delivery-icon {
+  color: #7b7b7b;
+  width: 24px;
+  height: 24px;  
+}
+.delivery-services__pickup-icon {
+  color: #7b7b7b;
+  width: 24px;
+  height: 24px;
 }
