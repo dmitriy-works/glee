@@ -163,8 +163,6 @@ body {
   }
 }
 
-
-
 .product-about__buy-basket {
   color: #fff;
   width: 30px;
@@ -191,4 +189,54 @@ body {
   color: #7b7b7b;
   width: 24px;
   height: 24px;
+}
+
+.product-feedback__arrow-down {  
+  color: $light-color;
+  width: 30px;
+  height: 30px; 
+  margin-right: 8px;
+  margin-bottom: 7px; 
+}
+
+.product-feedback__like {
+  color: $light-color;
+  width: 20px;
+  height: 20px; 
+  &:hover {
+    color: $sale;
+  }
+  &:active {
+    color: green;
+  }
+}
+
+.product-feedback__dislike {
+  color: $light-color;
+  width: 20px;
+  height: 20px; 
+  &:hover {
+    color: $sale;
+  }
+  &:active {
+    color: green;
+  }
+}
+.product-feedback__vertical-dots {
+  color: $light-color;
+  width: 20px;
+  height: 20px; 
+  &:hover {
+    color: $sale;
+  }
+  &:active {
+    color: green;
+  }
+  margin-left: 15px;
+}
+
+.product-modal__close-modal {
+  color: $default;
+  width: 20px;
+  height: 20px;  
 }
