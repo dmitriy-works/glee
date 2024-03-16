@@ -25,23 +25,23 @@ function dislike() {
 }
 
 
-document.getElementById("feedback-btn").addEventListener("click", function () {
-    document.getElementById("feedback-modal").classList.add("feedback__modal-open")
-  });
+// document.getElementById("feedback-btn").addEventListener("click", function () {
+//     document.getElementById("feedback-modal").classList.add("feedback__modal-open")
+//   });
 
-  document.getElementById("modal-close").addEventListener("click", function () {
-    document.getElementById("modal-window").classList.remove("open")
-  });
+//   document.getElementById("modal-close").addEventListener("click", function () {
+//     document.getElementById("modal-window").classList.remove("open")
+//   });
 
 
 
-  document.getElementById("open-modal-btn").addEventListener("click", function () {
-    document.getElementById("modal-window").classList.add("open")
-  });
+//   document.getElementById("open-modal-btn").addEventListener("click", function () {
+//     document.getElementById("modal-window").classList.add("open")
+//   });
 
-  document.getElementById("modal-close").addEventListener("click", function () {
-    document.getElementById("modal-window").classList.remove("open")
-  });
+//   document.getElementById("modal-close").addEventListener("click", function () {
+//     document.getElementById("modal-window").classList.remove("open")
+//   });
   
 
   $('.related-slider__items').slick({

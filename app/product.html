@@ -568,7 +568,7 @@
                       <svg class="product-feedback__arrow-down">
                         <use xlink:href="images/sprite.svg#arrow-down"></use>
                       </svg>
-                      Ответить
+                      <a class="product-feedback__link" href="#modal">Ответить</a>
                     </button>
                     <div class="product-feedback__votes">
 
@@ -593,8 +593,9 @@
                       </button>
 
                       <div class="product-feedback__modal" id="feedback-modal">
+
                         <div class="product-feedback__modal-text">
-                          <a class="product-feedback__modal-link" href="#">
+                          <a class="product-feedback__modal-link" href="#popup-feedback">
                             Пожаловаться на отзыв
                           </a>
                         </div>
@@ -607,36 +608,63 @@
 
                     </div>
 
-                    <div class="product-modal" id="modal-window">
-                      <div class="product-modal__content">
-                        <div class="product-modal__top">
-                          <h3 class="product-modal__title">Отправить ответ</h3>
-                          <button id="modal-close" class="product-modal__btn-close" type="button">
-                            <svg class="product-modal__close-modal">
-                              <use xlink:href="images/sprite.svg#close-modal-icon"></use>
-                            </svg>
-                          </button>
+                    <div id="popup-feedback" class="product-popup">
+                      <div class="product-popup__body">
+                        <div class="product-popup__content">
+                          <div class="product-popup__heding">
+                            <h3 class="product-popup__title">Пожаловаться на отзыв</h3>
+                            <a class="product-popup__close" href="#feedback-modal">
+                              <svg class="product-popup__close-modal">
+                                <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <form class="product-popup__form" action="#">
+                            <textarea class="product-popup__textarea" placeholder="Введите ваш текст"></textarea>
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
                         </div>
                       </div>
-                      <form class="product-modal__form" action="#">
+                    </div>
+
+
+
+
+                    <div class="product-modal" id="modal">
+                      <a class="product-modal__area" href="#open-modal-btn"></a>
+                      <div class="product-modal__body">
                         <div class="product-modal__content">
-                          <label class="product-modal__form-label">Коментарий</label>
-                          <textarea class="product-modal__form-textarea"></textarea>
-
-                          <label class="product-modal__form-label">Ваше имя и фамилия</label>
-                          <input class="product-modal__form-input" type="text" placeholder="Введите ваше имя">
-
-                          <label class="product-modal__form-label">Электронная почта</label>
-                          <input class="product-modal__form-input" type="email" placeholder="Введите ваш email">
-
-                          <div class="product-modal__buttons">
-                            <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
-                            <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                          <div class="product-modal__top">
+                            <h3 class="product-modal__title">Отправить ответ</h3>
+                            <button id="modal-close" class="product-modal__btn-close" type="button">
+                              <a class="close-modal" href="#open-modal-btn">
+                                <svg class="product-modal__close-modal">
+                                  <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                                </svg>
+                              </a>
+                            </button>
                           </div>
 
-                        </div>
+                          <form class="product-modal__form" action="#">
+                            <label class="product-modal__form-label">Коментарий</label>
+                            <textarea class="product-modal__form-textarea"></textarea>
 
-                      </form>
+                            <label class="product-modal__form-label">Ваше имя и фамилия</label>
+                            <input class="product-modal__form-input" type="text" placeholder="Введите ваше имя">
+
+                            <label class="product-modal__form-label">Электронная почта</label>
+                            <input class="product-modal__form-input" type="email" placeholder="Введите ваш email">
+
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </div>
 
                   </div>

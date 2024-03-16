@@ -235,7 +235,8 @@ body {
   margin-left: 15px;
 }
 
-.product-modal__close-modal {
+.product-modal__close-modal,
+.product-popup__close-modal {
   color: $default;
   width: 20px;
   height: 20px;  
