@@ -90,7 +90,6 @@
       <div class="container-small">
         <div class="product-page__inner">
           <div class="product-page__slide product-detalis">
-
             <div class="product-detalis__thumb">
               <div class="product-detalis__thumb-item">
                 <img src="images/product-detalis/2.png" alt="product__image">
@@ -337,7 +336,6 @@
                           <li class="delivery-services__item">
                             <p>Средний срок доставки 7 дней</p>
                             <a class="delivery-services__link" href="#">Смотреть на карте</a>
-
                           </li>
                         </ul>
                       </div>
@@ -356,12 +354,11 @@
               </div>
               <div class="product-characteristics__inner">
                 <div class="product-characteristics__content">
-
                   <dl class="product-characteristics__list">
-
                     <div class="product-characteristics__list-item">
                       <dt class="product-characteristics__label">
-                        <span>Тип</span></dt>
+                        <span>Тип</span>
+                      </dt>
                       <dd class="product-characteristics__value">
                         <div class="product-characteristics__value-linkbox">
                           <a class="product-characteristics__value-link" href="#">Кресла</a>
@@ -442,10 +439,8 @@
                   </dl>
                 </div>
 
-
                 <div class="product-about__right">
                   <div class="product-characteristics__sidebar">
-
                     <div class="product-about__item product-about__description">
                       <div class="product-about__item-content">
                         <div class="product-about__description-box">
@@ -536,7 +531,6 @@
                 <div class="product-feedback__star" data-rateyo-rating="4"></div>
                 <a class="product-feedback__link" href="#">10 отзывов</a>
               </div>
-
               <div class="product-feedback__items">
                 <div class="product-feedback__item">
                   <div class="product-feedback__author">
@@ -564,14 +558,13 @@
                     </div>
                   </dl>
                   <div class="product-feedback__bottom">
-                    <button id="open-modal-btn" class="product-feedback__bottom-btn" type="button">
+                    <button class="product-feedback__bottom-btn" type="button">
                       <svg class="product-feedback__arrow-down">
                         <use xlink:href="images/sprite.svg#arrow-down"></use>
                       </svg>
-                      <a class="product-feedback__link" href="#modal">Ответить</a>
+                      <a class="product-feedback__popup-link" href="#">Ответить</a>
                     </button>
                     <div class="product-feedback__votes">
-
                       <button class="product-feedback__votes-btn btn-like">
                         <svg class="product-feedback__like">
                           <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -586,16 +579,17 @@
                         <span class="product-feedback__counter sok-minus">0</span>
                       </button>
 
-                      <button class="product-feedback__votes-btn" id="feedback-btn">
-                        <svg class="product-feedback__vertical-dots">
-                          <use xlink:href="images/sprite.svg#icon-vertical-dots"></use>
-                        </svg>
+                      <button class="product-feedback__votes-btn">
+                        <a class="product-feedback__dots-link" href="#">
+                          <svg class="product-feedback__vertical-dots">
+                            <use xlink:href="images/sprite.svg#icon-vertical-dots"></use>
+                          </svg>
+                        </a>
                       </button>
 
-                      <div class="product-feedback__modal" id="feedback-modal">
-
+                      <div class="product-feedback__modal">
                         <div class="product-feedback__modal-text">
-                          <a class="product-feedback__modal-link" href="#popup-feedback">
+                          <a class="product-feedback__modal-link" href="#">
                             Пожаловаться на отзыв
                           </a>
                         </div>
@@ -605,15 +599,14 @@
                           </a>
                         </p>
                       </div>
-
                     </div>
 
-                    <div id="popup-feedback" class="product-popup">
+                    <div class="product-popup">
                       <div class="product-popup__body">
                         <div class="product-popup__content">
                           <div class="product-popup__heding">
                             <h3 class="product-popup__title">Пожаловаться на отзыв</h3>
-                            <a class="product-popup__close" href="#feedback-modal">
+                            <a class="product-popup__close-complain" href="#">
                               <svg class="product-popup__close-modal">
                                 <use xlink:href="images/sprite.svg#close-modal-icon"></use>
                               </svg>
@@ -630,24 +623,19 @@
                       </div>
                     </div>
 
-
-
-
-                    <div class="product-modal" id="modal">
-                      <a class="product-modal__area" href="#open-modal-btn"></a>
+                    <div class="product-modal">
                       <div class="product-modal__body">
                         <div class="product-modal__content">
                           <div class="product-modal__top">
                             <h3 class="product-modal__title">Отправить ответ</h3>
-                            <button id="modal-close" class="product-modal__btn-close" type="button">
-                              <a class="close-modal" href="#open-modal-btn">
+                            <button class="product-modal__btn-close" type="button">
+                              <a class="close-popup" href="#">
                                 <svg class="product-modal__close-modal">
                                   <use xlink:href="images/sprite.svg#close-modal-icon"></use>
                                 </svg>
                               </a>
                             </button>
                           </div>
-
                           <form class="product-modal__form" action="#">
                             <label class="product-modal__form-label">Коментарий</label>
                             <textarea class="product-modal__form-textarea"></textarea>
@@ -666,25 +654,378 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
 
+                <div class="product-feedback__item">
+                  <div class="product-feedback__author">
+                    <h5 class="product-feedback__name">Иван Козылкин</h5>
+                    <p class="product-feedback__date">10 ноября 2023</p>
+                  </div>
+                  <p class="product-feedback__text">Отзыв от покупателя. Продавец: Glee</p>
+                  <div class="product-feedback__star product-feedback__star-comment" data-rateyo-rating="5"></div>
+                  <p class="product-feedback__review">
+                    Пользуюсь почти год, нареканий пока нет
+                  </p>
+                  <dl class="product-feedback__comment">
+                    <div class="product-feedback__dignity">
+                      <dt class="product-feedback__dignity-title">Достоинства:</dt>
+                      <dd class="product-feedback__dignity-text">удобство, дизайн и эстетическая привлекательность</dd>
+                    </div>
+
+                    <div class="product-feedback__flaws">
+                      <dt class="product-feedback__flaws-title">Недостатки:</dt>
+                      <dd class="product-feedback__flaws-text">Нет</dd>
+                    </div>
+                  </dl>
+                  <div class="product-feedback__bottom">
+                    <button class="product-feedback__bottom-btn" type="button">
+                      <svg class="product-feedback__arrow-down">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <a class="product-feedback__popup-link" href="#">Ответить</a>
+                    </button>
+                    <div class="product-feedback__votes">
+                      <button class="product-feedback__votes-btn btn-like">
+                        <svg class="product-feedback__like">
+                          <use xlink:href="images/sprite.svg#like-icon"></use>
+                        </svg>
+                        <span class="product-feedback__counter sok-plus">0</span>
+                      </button>
+
+                      <button class="product-feedback__votes-btn btn-dislike">
+                        <svg class="product-feedback__dislike">
+                          <use xlink:href="images/sprite.svg#dislike-icon"></use>
+                        </svg>
+                        <span class="product-feedback__counter sok-minus">0</span>
+                      </button>
+
+                      <button class="product-feedback__votes-btn">
+                        <a class="product-feedback__dots-link" href="#">
+                          <svg class="product-feedback__vertical-dots">
+                            <use xlink:href="images/sprite.svg#icon-vertical-dots"></use>
+                          </svg>
+                        </a>
+                      </button>
+
+                      <div class="product-feedback__modal">
+                        <div class="product-feedback__modal-text">
+                          <a class="product-feedback__modal-link" href="#">
+                            Пожаловаться на отзыв
+                          </a>
+                        </div>
+                        <p class="product-feedback__modal-text">
+                          <a class="product-feedback__modal-link" href="#">
+                            Перейти к отзыву
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="product-popup">
+                      <div class="product-popup__body">
+                        <div class="product-popup__content">
+                          <div class="product-popup__heding">
+                            <h3 class="product-popup__title">Пожаловаться на отзыв</h3>
+                            <a class="product-popup__close-complain" href="#">
+                              <svg class="product-popup__close-modal">
+                                <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <form class="product-popup__form" action="#">
+                            <textarea class="product-popup__textarea" placeholder="Введите ваш текст"></textarea>
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-modal">
+                      <div class="product-modal__body">
+                        <div class="product-modal__content">
+                          <div class="product-modal__top">
+                            <h3 class="product-modal__title">Отправить ответ</h3>
+                            <button class="product-modal__btn-close" type="button">
+                              <a class="close-popup" href="#">
+                                <svg class="product-modal__close-modal">
+                                  <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                                </svg>
+                              </a>
+                            </button>
+                          </div>
+                          <form class="product-modal__form" action="#">
+                            <label class="product-modal__form-label">Коментарий</label>
+                            <textarea class="product-modal__form-textarea"></textarea>
+
+                            <label class="product-modal__form-label">Ваше имя и фамилия</label>
+                            <input class="product-modal__form-input" type="text" placeholder="Введите ваше имя">
+
+                            <label class="product-modal__form-label">Электронная почта</label>
+                            <input class="product-modal__form-input" type="email" placeholder="Введите ваш email">
+
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-feedback__item">
+                  <div class="product-feedback__author">
+                    <h5 class="product-feedback__name">Светлана Коркина</h5>
+                    <p class="product-feedback__date">8 ноября 2023</p>
+                  </div>
+                  <p class="product-feedback__text">Отзыв от покупателя. Продавец: Glee</p>
+                  <div class="product-feedback__star product-feedback__star-comment" data-rateyo-rating="5"></div>
+                  <p class="product-feedback__review">
+                    Давно хотела приобрести данное кресло, купила, и ни капли не жалею
+                  </p>
+                  <dl class="product-feedback__comment">
+                    <div class="product-feedback__dignity">
+                      <dt class="product-feedback__dignity-title">Достоинства:</dt>
+                      <dd class="product-feedback__dignity-text">Комфорт, стиль, дизайн</dd>
+                    </div>
+
+                    <div class="product-feedback__flaws">
+                      <dt class="product-feedback__flaws-title">Недостатки:</dt>
+                      <dd class="product-feedback__flaws-text">Нет</dd>
+                    </div>
+                  </dl>
+                  <div class="product-feedback__bottom">
+                    <button class="product-feedback__bottom-btn" type="button">
+                      <svg class="product-feedback__arrow-down">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <a class="product-feedback__popup-link" href="#">Ответить</a>
+                    </button>
+                    <div class="product-feedback__votes">
+                      <button class="product-feedback__votes-btn btn-like">
+                        <svg class="product-feedback__like">
+                          <use xlink:href="images/sprite.svg#like-icon"></use>
+                        </svg>
+                        <span class="product-feedback__counter sok-plus">0</span>
+                      </button>
+
+                      <button class="product-feedback__votes-btn btn-dislike">
+                        <svg class="product-feedback__dislike">
+                          <use xlink:href="images/sprite.svg#dislike-icon"></use>
+                        </svg>
+                        <span class="product-feedback__counter sok-minus">0</span>
+                      </button>
+
+                      <button class="product-feedback__votes-btn">
+                        <a class="product-feedback__dots-link" href="#">
+                          <svg class="product-feedback__vertical-dots">
+                            <use xlink:href="images/sprite.svg#icon-vertical-dots"></use>
+                          </svg>
+                        </a>
+                      </button>
+
+                      <div class="product-feedback__modal">
+                        <div class="product-feedback__modal-text">
+                          <a class="product-feedback__modal-link" href="#">
+                            Пожаловаться на отзыв
+                          </a>
+                        </div>
+                        <p class="product-feedback__modal-text">
+                          <a class="product-feedback__modal-link" href="#">
+                            Перейти к отзыву
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="product-popup">
+                      <div class="product-popup__body">
+                        <div class="product-popup__content">
+                          <div class="product-popup__heding">
+                            <h3 class="product-popup__title">Пожаловаться на отзыв</h3>
+                            <a class="product-popup__close-complain" href="#">
+                              <svg class="product-popup__close-modal">
+                                <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <form class="product-popup__form" action="#">
+                            <textarea class="product-popup__textarea" placeholder="Введите ваш текст"></textarea>
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-modal">
+                      <div class="product-modal__body">
+                        <div class="product-modal__content">
+                          <div class="product-modal__top">
+                            <h3 class="product-modal__title">Отправить ответ</h3>
+                            <button class="product-modal__btn-close" type="button">
+                              <a class="close-popup" href="#">
+                                <svg class="product-modal__close-modal">
+                                  <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                                </svg>
+                              </a>
+                            </button>
+                          </div>
+                          <form class="product-modal__form" action="#">
+                            <label class="product-modal__form-label">Коментарий</label>
+                            <textarea class="product-modal__form-textarea"></textarea>
+
+                            <label class="product-modal__form-label">Ваше имя и фамилия</label>
+                            <input class="product-modal__form-input" type="text" placeholder="Введите ваше имя">
+
+                            <label class="product-modal__form-label">Электронная почта</label>
+                            <input class="product-modal__form-input" type="email" placeholder="Введите ваш email">
+
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-feedback__item">
+                  <div class="product-feedback__author">
+                    <h5 class="product-feedback__name">Виктор Супрунин</h5>
+                    <p class="product-feedback__date">7 ноября 2023</p>
+                  </div>
+                  <p class="product-feedback__text">Отзыв от покупателя. Продавец: Glee</p>
+                  <div class="product-feedback__star product-feedback__star-comment" data-rateyo-rating="4"></div>
+                  <p class="product-feedback__review">
+                    Креслом очень доволен, правда немного дороговато
+                  </p>
+                  <dl class="product-feedback__comment">
+                    <div class="product-feedback__dignity">
+                      <dt class="product-feedback__dignity-title">Достоинства:</dt>
+                      <dd class="product-feedback__dignity-text">Комфорт, стиль, дизайн</dd>
+                    </div>
+
+                    <div class="product-feedback__flaws">
+                      <dt class="product-feedback__flaws-title">Недостатки:</dt>
+                      <dd class="product-feedback__flaws-text">Цена</dd>
+                    </div>
+                  </dl>
+                  <div class="product-feedback__bottom">
+                    <button class="product-feedback__bottom-btn" type="button">
+                      <svg class="product-feedback__arrow-down">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                      </svg>
+                      <a class="product-feedback__popup-link" href="#">Ответить</a>
+                    </button>
+                    <div class="product-feedback__votes">
+                      <button class="product-feedback__votes-btn btn-like">
+                        <svg class="product-feedback__like">
+                          <use xlink:href="images/sprite.svg#like-icon"></use>
+                        </svg>
+                        <span class="product-feedback__counter sok-plus">0</span>
+                      </button>
+
+                      <button class="product-feedback__votes-btn btn-dislike">
+                        <svg class="product-feedback__dislike">
+                          <use xlink:href="images/sprite.svg#dislike-icon"></use>
+                        </svg>
+                        <span class="product-feedback__counter sok-minus">0</span>
+                      </button>
+
+                      <button class="product-feedback__votes-btn">
+                        <a class="product-feedback__dots-link" href="#">
+                          <svg class="product-feedback__vertical-dots">
+                            <use xlink:href="images/sprite.svg#icon-vertical-dots"></use>
+                          </svg>
+                        </a>
+                      </button>
+
+                      <div class="product-feedback__modal">
+                        <div class="product-feedback__modal-text">
+                          <a class="product-feedback__modal-link" href="#">
+                            Пожаловаться на отзыв
+                          </a>
+                        </div>
+                        <p class="product-feedback__modal-text">
+                          <a class="product-feedback__modal-link" href="#">
+                            Перейти к отзыву
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="product-popup">
+                      <div class="product-popup__body">
+                        <div class="product-popup__content">
+                          <div class="product-popup__heding">
+                            <h3 class="product-popup__title">Пожаловаться на отзыв</h3>
+                            <a class="product-popup__close-complain" href="#">
+                              <svg class="product-popup__close-modal">
+                                <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                              </svg>
+                            </a>
+                          </div>
+                          <form class="product-popup__form" action="#">
+                            <textarea class="product-popup__textarea" placeholder="Введите ваш текст"></textarea>
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-modal">
+                      <div class="product-modal__body">
+                        <div class="product-modal__content">
+                          <div class="product-modal__top">
+                            <h3 class="product-modal__title">Отправить ответ</h3>
+                            <button class="product-modal__btn-close" type="button">
+                              <a class="close-popup" href="#">
+                                <svg class="product-modal__close-modal">
+                                  <use xlink:href="images/sprite.svg#close-modal-icon"></use>
+                                </svg>
+                              </a>
+                            </button>
+                          </div>
+                          <form class="product-modal__form" action="#">
+                            <label class="product-modal__form-label">Коментарий</label>
+                            <textarea class="product-modal__form-textarea"></textarea>
+
+                            <label class="product-modal__form-label">Ваше имя и фамилия</label>
+                            <input class="product-modal__form-input" type="text" placeholder="Введите ваше имя">
+
+                            <label class="product-modal__form-label">Электронная почта</label>
+                            <input class="product-modal__form-input" type="email" placeholder="Введите ваш email">
+
+                            <div class="product-modal__buttons">
+                              <button class="product-modal__btn product-modal__btn--gray">Отменить</button>
+                              <button class="product-modal__btn product-modal__btn--accent">Добавить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
-
-
-            <div class="product-about__right"></div>
           </div>
-
         </div>
-
       </div>
   </div>
   </div>
-
   </section>
 
   <section class="related-slider">
@@ -693,7 +1034,6 @@
         <h2 class="related-slider__top-title">Related products</h2>
       </div>
       <div class="related-slider__items">
-
         <div class="related-slider__item">
           <div class="products-item">
             <div class="products-item__inner">
@@ -702,7 +1042,6 @@
                   <img class="products-item__images" src="images/products/products-1.png" alt="products image">
                 </a>
                 <div class="products-item__link-favorite">
-
                   <a class="products-item__link" href="#">
                     <svg width="22px" height="20px">
                       <path fill-rule="evenodd" fill="#01526f"
@@ -765,7 +1104,6 @@
           </div>
         </div>
 
-
         <div class="related-slider__item">
           <div class="products-item products-item--sale">
             <div class="products-item__inner">
@@ -774,7 +1112,6 @@
                   <img class="products-item__images" src="images/products/products-2.png" alt="products image">
                 </a>
                 <div class="products-item__link-favorite">
-
                   <a class="products-item__link" href="#">
                     <svg width="22px" height="20px">
                       <path fill-rule="evenodd" fill="#01526f"
@@ -905,10 +1242,8 @@
                 <button class="products-item__btn">Add to cart</button>
               </div>
             </div>
-
           </div>
         </div>
-
 
         <div class="related-slider__item">
           <div class="products-item products-item--sale">
@@ -981,7 +1316,6 @@
           </div>
         </div>
 
-
         <div class="related-slider__item">
           <div class="products-item">
             <div class="products-item__inner">
@@ -1052,7 +1386,6 @@
             </div>
           </div>
         </div>
-
 
         <div class="related-slider__item">
           <div class="products-item products-item--sale">
@@ -1125,7 +1458,6 @@
           </div>
         </div>
 
-
         <div class="related-slider__item">
           <div class="products-item">
             <div class="products-item__inner">
@@ -1196,8 +1528,6 @@
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
     </div>
@@ -1279,7 +1609,6 @@
     </div>
   </section>
   </div>
-
   </div>
 
   <footer class="footer">

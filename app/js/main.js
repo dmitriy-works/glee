@@ -1,3 +1,5 @@
+// const { event } = require("jquery")
+
 $(function () {
 
 
@@ -25,24 +27,86 @@ function dislike() {
 }
 
 
-// document.getElementById("feedback-btn").addEventListener("click", function () {
-//     document.getElementById("feedback-modal").classList.add("feedback__modal-open")
-//   });
 
-//   document.getElementById("modal-close").addEventListener("click", function () {
-//     document.getElementById("modal-window").classList.remove("open")
-//   });
+const openModal = document.querySelector('.product-feedback__popup-link')
+const closeModal = document.querySelector('.close-popup')
+const modalWindow = document.querySelector('.product-modal')
+
+openModal.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindow.classList.add('modal-active')
+})
+
+closeModal.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindow.classList.remove('modal-active')
+})
+
+modalWindow.addEventListener('click', function () {
+  modalWindow.classList.remove('modal-active')
+})
+
+
+const openPopup = document.querySelector('.product-feedback__dots-link')
+const closePopup = document.querySelector('.product-tabs')
+const closePopup2 = document.querySelector('.product-feedback__item')
+const popupWindow = document.querySelector('.product-feedback__modal')
 
 
 
-//   document.getElementById("open-modal-btn").addEventListener("click", function () {
-//     document.getElementById("modal-window").classList.add("open")
-//   });
+const closeWindowPopup = event => {
+  const target = event.target;
 
-//   document.getElementById("modal-close").addEventListener("click", function () {
-//     document.getElementById("modal-window").classList.remove("open")
-//   });
-  
+  if (target === closePopup) {
+    popupWindow.classList.remove('popup-active')
+  }
+}
+
+const closeWindowPopup2 = event => {
+  const target = event.target;
+
+  if (target === closePopup2) {
+    popupWindow.classList.remove('popup-active')
+  }
+}
+
+
+openPopup.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupWindow.classList.add('popup-active')
+})
+
+
+
+popupWindow.addEventListener('click', function () {
+  popupWindow.classList.remove('popup-active')
+})
+
+
+
+closePopup.addEventListener('click', closeWindowPopup);
+closePopup2.addEventListener('click', closeWindowPopup2 )
+
+
+const openComplain = document.querySelector('.product-feedback__modal-link')
+const complainWindow = document.querySelector('.product-popup')
+const closeComplain = document.querySelector('.product-popup__close-complain')
+
+openComplain.addEventListener('click', function (e) {
+  e.preventDefault()
+  complainWindow.classList.add('complain-open')
+})
+
+closeComplain.addEventListener('click', function (e) {
+  e.preventDefault()
+  complainWindow.classList.remove('complain-open')
+})
+
+complainWindow.addEventListener('click', function () {
+  complainWindow.classList.remove('complain-open')
+})
+
+
 
   $('.related-slider__items').slick({
     slidesToShow: 4,

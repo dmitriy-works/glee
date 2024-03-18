@@ -1934,8 +1934,7 @@
   }
 }
 
-.product-characteristics {  
-  
+.product-characteristics {    
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -2025,6 +2024,7 @@
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #d2d2d2;
+    margin-bottom: 30px;
   }
   &__author {
     display: flex;
@@ -2108,7 +2108,7 @@
     z-index: 999;
     display: none;    
     transition: visibility .8s, opacity .3s;
-    &.feedback__modal-open {
+    &.popup-active {
       display: block;      
     }
   }
@@ -2119,12 +2119,13 @@
     }
   }
   &__modal-link {
-    color: $light-color;    
+    color: $light-color;       
     &:hover {
       color: $sale;
       text-decoration: underline;
     }  
   }
+  
   
 }
 
@@ -2138,13 +2139,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);  
+  background-color: transparent;  
   opacity: 0;
   visibility: hidden;
-  z-index: 999;
-  &:target {
+  z-index: 999;  
+  transition: visibility .4s, opacity .4s,;
+  &.modal-active {
     opacity: 1;
-    visibility: visible;
+    visibility: visible;    
+    background-color: rgba(0,0,0,0.7);  
   }
   &__body {
     min-height: 100%;
@@ -2238,7 +2241,9 @@
   background-color: rgba(0,0,0,0.5);
   opacity: 0;
   visibility: hidden;
-  &:target {
+  z-index: 999;
+  transition: opacity .8s, visibility .4s;
+  &.complain-open {
     opacity: 1;
     visibility: visible;
   }
@@ -2253,6 +2258,7 @@
     max-width: 700px;
     width: 100%;
     padding: 20px;
+    border-radius: 5px;
     background-color: #fff;
   }
   &__heding {
@@ -2261,7 +2267,7 @@
     align-items: center;
     padding-bottom: 20px;
     margin-bottom: 30px;
-    border-bottom: 1px solid $default
+    border-bottom: 1px solid $bg;
   }
   &__textarea {
     width: 100%;
@@ -2269,6 +2275,7 @@
     padding: 20px;
     display: inline-block;
     margin-bottom: 30px;
+    border: 1px solid $bg;
   }
   // &__area {
   //   width: 100%;
@@ -2871,6 +2878,14 @@
       height: 100vh;
     }
   }
+  .product-popup {
+    &__body {
+      padding: 0;
+    }
+    &__content {
+      height: 100vh;
+    }
+  }
 }
 
 
@@ -3161,8 +3176,8 @@
       top: 0;
       right: 0;
       width: 250px;
-    }
-    
+      background-color: #fff;
+    }    
   }
 }
 
