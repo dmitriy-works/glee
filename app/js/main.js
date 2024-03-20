@@ -27,84 +27,340 @@ function dislike() {
 }
 
 
+const scrollController = {
+  scrollPosition: 0,
+  disabledScroll() {
+    scrollController.scrollPosition = window.scrollY;
+    document.body.style.cssText = `
+    overflow: hidden;
+    position: fixed;
+    top: -${scrollController.scrollPosition}px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-right: ${window.innerWidth - document.body.offsetWidth}px
+    `;
+    document.documentElement.style.scrollBehavior = 'unset';
+  },
+  enabledScroll(){
+    document.body.style.cssText = '';
+    window.scroll({top: scrollController.scrollPosition})
+    document.documentElement.style.scrollBehavior = '';
+  }
+}
 
-const openModal = document.querySelector('.product-feedback__popup-link')
-const closeModal = document.querySelector('.close-popup')
-const modalWindow = document.querySelector('.product-modal')
 
-openModal.addEventListener('click', function (e) {
+
+
+
+// User 1----------------------------------------------------------------------
+
+const openModalUser1 = document.querySelector('.feedback__popup-link1')
+const modalWindowUser1 = document.querySelector('.product-modal__user1')
+const closeModalUser1 = document.querySelector('.modal__close-btn1')
+
+
+openModalUser1.addEventListener('click', function (e) {
   e.preventDefault()
-  modalWindow.classList.add('modal-active')
+  modalWindowUser1.classList.add('modal-active')
+  scrollController.disabledScroll()
 })
 
-closeModal.addEventListener('click', function (e) {
+closeModalUser1.addEventListener('click', function (e) {
   e.preventDefault()
-  modalWindow.classList.remove('modal-active')
+  modalWindowUser1.classList.remove('modal-active')  
+  scrollController.enabledScroll()
 })
 
-modalWindow.addEventListener('click', function () {
-  modalWindow.classList.remove('modal-active')
+modalWindowUser1.addEventListener('click', function () {
+  modalWindowUser1.classList.remove('modal-active') 
+  scrollController.enabledScroll() 
 })
 
 
-const openPopup = document.querySelector('.product-feedback__dots-link')
-const closePopup = document.querySelector('.product-tabs')
-const closePopup2 = document.querySelector('.product-feedback__item')
-const popupWindow = document.querySelector('.product-feedback__modal')
+const openPopupUser1 = document.querySelector('.feedback__dots1')
+const popupWindowUser1 = document.querySelector('.feedback__modal-1')
+const closePopupUser1 = document.querySelector('.product-tabs')
+const closePopupItemUser1 = document.querySelector('.feedback__item-1')
 
 
 
 const closeWindowPopup = event => {
   const target = event.target;
 
-  if (target === closePopup) {
-    popupWindow.classList.remove('popup-active')
+  if (target === closePopupUser1) {
+    popupWindowUser1.classList.remove('popup-active')
   }
 }
 
 const closeWindowPopup2 = event => {
   const target = event.target;
 
-  if (target === closePopup2) {
-    popupWindow.classList.remove('popup-active')
+  if (target === closePopupItemUser1) {
+    popupWindowUser1.classList.remove('popup-active')
   }
 }
 
+closePopupUser1.addEventListener('click', closeWindowPopup);
+closePopupItemUser1.addEventListener('click', closeWindowPopup2 )
 
-openPopup.addEventListener('click', function (e) {
+
+openPopupUser1.addEventListener('click', function (e) {
   e.preventDefault()
-  popupWindow.classList.add('popup-active')
+  popupWindowUser1.classList.add('popup-active')
+})
+
+popupWindowUser1.addEventListener('click', function () {
+  popupWindowUser1.classList.remove('popup-active')
 })
 
 
 
-popupWindow.addEventListener('click', function () {
-  popupWindow.classList.remove('popup-active')
-})
+const openPopupComplainUser1 = document.querySelector('.feedback__modal-link1')
+const popupComplainUser1 = document.querySelector('.popup-complain-1')
+const closePopupComplainUser1 = document.querySelector('.close-complain')
 
-
-
-closePopup.addEventListener('click', closeWindowPopup);
-closePopup2.addEventListener('click', closeWindowPopup2 )
-
-
-const openComplain = document.querySelector('.product-feedback__modal-link')
-const complainWindow = document.querySelector('.product-popup')
-const closeComplain = document.querySelector('.product-popup__close-complain')
-
-openComplain.addEventListener('click', function (e) {
+openPopupComplainUser1.addEventListener('click', function (e) {
   e.preventDefault()
-  complainWindow.classList.add('complain-open')
+  popupComplainUser1.classList.add('complain-active')
+  scrollController.disabledScroll()
 })
 
-closeComplain.addEventListener('click', function (e) {
+closePopupComplainUser1.addEventListener('click', function (e) {
   e.preventDefault()
-  complainWindow.classList.remove('complain-open')
+  popupComplainUser1.classList.remove('complain-active')
+  scrollController.enabledScroll()
 })
 
-complainWindow.addEventListener('click', function () {
-  complainWindow.classList.remove('complain-open')
+popupComplainUser1.addEventListener('click', function () {
+  popupComplainUser1.classList.remove('complain-active')
+  scrollController.enabledScroll()
 })
+
+// User 2--------------------------------------------------------------------------------
+
+const openModalUser2 = document.querySelector('.feedback__popup-link2')
+const modalWindowUser2 = document.querySelector('.product-modal__user2')
+const closeModalUser2 = document.querySelector('.modal__close-btn2')
+
+openModalUser2.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser2.classList.add('modal-active')
+  scrollController.disabledScroll()
+})
+
+closeModalUser2.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser2.classList.remove('modal-active')
+  scrollController.enabledScroll()
+})
+
+modalWindowUser2.addEventListener('click', function () {
+  modalWindowUser2.classList.remove('modal-active')
+  scrollController.enabledScroll()
+})
+
+
+const openPopupUser2 = document.querySelector('.feedback__dots2')
+const popupWindowUser2 = document.querySelector('.feedback__modal-2')
+const closePopupUser2 = document.querySelector('.product-tabs')
+
+openPopupUser2.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupWindowUser2.classList.add('popup-active')
+})
+
+popupWindowUser2.addEventListener('click', function () {
+  popupWindowUser2.classList.remove('popup-active')
+})
+
+const closeWindowModal = event => {
+  const target = event.target;
+
+  if (target === closePopupUser2) {
+    popupWindowUser2.classList.remove('popup-active')
+  }
+}
+
+closePopupUser2.addEventListener('click', closeWindowModal);
+
+
+const openPopupComplainUser2 = document.querySelector('.feedback__modal-link2')
+const popupComplainUser2 = document.querySelector('.popup-complain-2')
+const closePopupComplainUser2 = document.querySelector('.close-complain2')
+
+openPopupComplainUser2.addEventListener ('click', function (e) {
+  e.preventDefault()
+  popupComplainUser2.classList.add('complain-active')
+  scrollController.disabledScroll()
+})
+
+closePopupComplainUser2.addEventListener ('click', function (e) {
+  e.preventDefault()
+  popupComplainUser2.classList.remove('complain-active')
+  scrollController.enabledScroll()
+})
+
+popupComplainUser2.addEventListener ('click', function (e) {
+  e.preventDefault()
+  popupComplainUser2.classList.remove('complain-active')
+  scrollController.enabledScroll()
+})
+
+// User 3------------------------------------------------------------------------
+
+
+const openModalUser3 = document.querySelector('.feedback__popup-link3')
+const modalWindowUser3 = document.querySelector('.product-modal__user3')
+const closeModalUser3 = document.querySelector('.modal__close-btn3')
+
+openModalUser3.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser3.classList.add('modal-active')
+  scrollController.disabledScroll()
+})
+
+closeModalUser3.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser3.classList.remove('modal-active')
+  scrollController.enabledScroll()
+})
+
+modalWindowUser3.addEventListener('click', function () {
+  modalWindowUser3.classList.remove('modal-active')
+  scrollController.enabledScroll()
+})
+
+
+
+const openPopupUser3 = document.querySelector('.feedback__dots3')
+const popupWindowUser3 = document.querySelector('.feedback__modal-3')
+const closePopupUser3 = document.querySelector('.product-tabs')
+
+openPopupUser3.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupWindowUser3.classList.add('popup-active')
+})
+
+popupWindowUser3.addEventListener('click', function () {
+  popupWindowUser3.classList.remove('popup-active')
+})
+
+
+const closeWindowModalUser3 = event => {
+  const target = event.target;
+
+  if (target === closePopupUser3) {
+    popupWindowUser3.classList.remove('popup-active')
+  }
+}
+
+closePopupUser3.addEventListener('click', closeWindowModalUser3);
+
+
+const openPopupComplainUser3 = document.querySelector('.feedback__modal-link3')
+const popupComplainUser3 = document.querySelector('.popup-complain-3')
+const closePopupComplainUser3 = document.querySelector('.close-complain3')
+
+openPopupComplainUser3.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupComplainUser3.classList.add('complain-active')
+  scrollController.disabledScroll()
+})
+
+
+closePopupComplainUser3.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupComplainUser3.classList.remove('complain-active')
+  scrollController.enabledScroll()
+})
+
+popupComplainUser3.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupComplainUser3.classList.remove('complain-active')
+  scrollController.enabledScroll()
+})
+
+
+// User 4------------------------------------------------------------------------
+
+
+const openModalUser4 = document.querySelector('.feedback__popup-link4')
+const modalWindowUser4 = document.querySelector('.product-modal__user4')
+const closeModalUser4 = document.querySelector('.modal__close-btn4')
+
+openModalUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser4.classList.add('modal-active')
+  scrollController.disabledScroll()
+})
+
+closeModalUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser4.classList.remove('modal-active')
+  scrollController.enabledScroll()
+})
+
+modalWindowUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  modalWindowUser4.classList.remove('modal-active')
+  scrollController.enabledScroll()
+})
+
+
+
+const openPopupUser4 = document.querySelector('.feedback__dots4')
+const popupWindowUser4 = document.querySelector('.feedback__modal-4')
+const closePopupUser4 = document.querySelector('.product-tabs')
+
+
+openPopupUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupWindowUser4.classList.add('popup-active')  
+})
+
+popupWindowUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupWindowUser4.classList.remove('popup-active')  
+})
+
+
+const closeWindowModalUser4 = event => {
+  const target = event.target;
+
+  if (target === closePopupUser4) {
+    popupWindowUser4.classList.remove('popup-active')
+  }
+}
+
+closePopupUser4.addEventListener('click', closeWindowModalUser4);
+
+
+const openPopupComplainUser4 = document.querySelector('.feedback__modal-link4')
+const popupComplainUser4 = document.querySelector('.popup-complain-4')
+const closePopupComplainUser4 = document.querySelector('.close-complain4')
+
+
+openPopupComplainUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupComplainUser4.classList.add('complain-active')
+  scrollController.disabledScroll()
+})
+
+closePopupComplainUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupComplainUser4.classList.remove('complain-active')
+  scrollController.enabledScroll()
+})
+
+popupComplainUser4.addEventListener('click', function (e) {
+  e.preventDefault()
+  popupComplainUser4.classList.remove('complain-active')
+  scrollController.enabledScroll()
+})
+
+
+
 
 
 
