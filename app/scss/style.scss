@@ -382,7 +382,7 @@
 
 
 .star {
-  margin: 0 auto;
+  margin: 0 auto 7px;
 }
 
 .star-list {
@@ -615,7 +615,7 @@
     background-color: #fff;
   }
   &__description {
-    height: 100px;
+    height: 100%;
     @extend %raleway-700;
     font-size: 18px;
     line-height: 26px;
@@ -747,7 +747,7 @@
     width: 300px;
     display: flex;
     align-items: center;     
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
   &__num {
     color: $light-color;
@@ -766,12 +766,12 @@
     color: $dark-green;
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   &__text {
     color: $dark-green;
     @extend %raleway-500;
-    line-height: 30px;
+    line-height: 28px;
     border-bottom: 2px solid $bg;
     padding-bottom: 50px;
     margin-bottom: 50px;
@@ -890,8 +890,9 @@
     display: flex;    
   }
   &__content {
-    max-width: 300px;
-    margin-right: 100px;
+    max-width: 385px;
+    width: 100%;
+    margin-right: 60px;
   }
   &__title {
     color: $dark-green;
@@ -906,6 +907,7 @@
   }
   &__link {
     @extend %btn__link-team;
+    width: 250px;
   }
   &__items {
     display: grid;
@@ -943,7 +945,7 @@
     display: inline-block;
     font-size: 22px;
     line-height: 26px;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
   }
   &__info-position {
     color: $title;
@@ -962,23 +964,20 @@
     justify-content: center;
     align-items: center;
     transition: all .3s;
-    &:hover {
+    &:hover {                       
       background-color: $accent;
-    }
+      .team-item__link {
+        color: #fff;
+      }
+    }    
   }
-  &__social-link { 
-    margin-top: 7px;  
-    display: block; 
-    transition: all .3s;
-    path {
-      fill: #888;
-    }
-    &:hover {
-      path {
-      fill: #fff;
-    }
-    }
-  }
+  &__link {
+  color: $accent;
+  width: 20px;
+  height: 20px;
+  display: block;      
+}
+  
 }
 
 .terms {
@@ -2963,9 +2962,13 @@
       align-items: center;
     }
     &-item__box {
-      height: 572px;
+      height: auto;
     }
+   
   }
+   .pagination__arrows {
+     display: none;
+    }
   .categories {    
     &__item {
       justify-content: flex-start;
@@ -3115,10 +3118,7 @@
   }
   .clients {        
     padding-top: 630px;
-  }
-  .pagination__arrows {
-    display: none;
-  }
+  }  
   .shop-content__filter {
     display: none;
   }
@@ -3151,10 +3151,7 @@
   }
 
   .products-item {  
-    width: 100%;      
-    &__img-box {
-     height: 476px;      
-    }     
+    width: 100%;     
   }
   .product-about {
     &__item-content {
@@ -3226,14 +3223,11 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-    }
-    &-item__box {
-      height: 500px;
-    }
+    }    
   }  
   .products-item {
     &__link-box {
-      top: 74%;
+      top: 68%;
       opacity: 1;
     }
   }
@@ -3311,7 +3305,7 @@
 
   .products-item {        
     &__img-box {
-     height: 392px;      
+     height: 350px;      
     }     
   }
   .footer {
@@ -3487,5 +3481,8 @@
       font-size: 13px;
       line-height: 18px;
     }
+  }
+  .pagination .pagination__list {
+    padding: 30px;
   }
 }
