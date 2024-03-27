@@ -129,11 +129,13 @@ body {
   }
 }
 
-.product-info__icon {
+.product-info__icon,
+.blog-info__icon {
   width: 30px;
   height: 20px;  
 }
-.product-info__link {
+.product-info__link,
+.blog__info-link {
   color: $default;
   &:hover {
     color: $accent;
@@ -244,4 +246,9 @@ body {
 .filter-category__link {
   width: 10px;
   height: 10px;
+}
+
+.blog__comments-arrow {
+  width: 15px;
+  height: 15px;
 }
