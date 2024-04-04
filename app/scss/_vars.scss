@@ -1,10 +1,6 @@
 $title: #191919;
 $default: #7b7b7b;
 $accent: #01526f;
-$light-color:#a3bbc8;
-$bg: #edf1f4;
-$sale: #E74C3C;
-$dark-green: #243f4d;
 
 
 %raleway-400 {
@@ -20,19 +16,6 @@ $dark-green: #243f4d;
   font-weight: 700;
 }
 
-%mulish-400 {
-  font-family: 'Mulish-Regular', sans-serif;
-  font-weight: 400;
-}
-%mulish-500 {
-  font-family: 'Mulish-Medium', sans-serif;
-  font-weight: 500;
-}
-%mulish-700 {
-  font-family: 'Mulish-Bold', sans-serif;
-  font-weight: 700;
-}
-
 
 %checkbox-hidden {
   width: 1px;
@@ -43,62 +26,3 @@ $dark-green: #243f4d;
 }
 
 
-%btn__link {
-  width: 200px;
-  display: inline-block;
-  @extend %mulish-700;
-  font-size: 15px;
-  padding: 20px;
-  background-color: $light-color;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    width: 52px;
-    height: 29px;
-    background-image: url('../images/arrow-btn-white.svg');
-    background-repeat: no-repeat;
-    }
-}
-
-%btn__link-border {
-  color: $accent;
-  width: 200px;
-  display: inline-block;
-  @extend %mulish-700;
-  font-size: 15px;
-  padding: 20px;
-  border: 1px solid $accent;
-  background-color: transparent;
-  transition: all .3s;  
-    &:hover {
-      color: #fff;
-      border: none;      
-      background-color: $accent;      
-    }
-}
-
-%btn__link-team {
-  color: #fff;
-  @extend %raleway-700;
-  font-size: 15px;
-  padding: 15px;
-  display: inline-block;
-  width: 170px;
-  cursor: pointer;
-  border-radius: 3px;
-  background-color: $light-color;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 15px;
-    width: 15px;
-    height: 11px;
-    background-image: url('../images/icons/arrow-right-btn.svg');
-  }
-}

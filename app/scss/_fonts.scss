@@ -25,30 +25,3 @@
        url('../fonts/Raleway-Bold.woff') format('woff');
   font-display: swap;
 }
-@font-face {
-  font-family: 'Mulish-Regular', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  src: local('Mulish-Regular'),
-    url('../fonts/Mulish-Regular.woff2') format('woff2'),
-    url('../fonts/Mulish-Regular.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Mulish-Medium', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  src: local('Mulish-Medium'),
-       url('../fonts/Mulish-Medium.woff2') format('woff2'),
-       url('../fonts/Mulish-Medium.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Mulish-Bold', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  src: local('Mulish-Bold'),
-       url('../fonts/Mulish-Bold.woff2') format('woff2'),
-       url('../fonts/Mulish-Bold.woff') format('foff');
-  font-display: swap;
-}
